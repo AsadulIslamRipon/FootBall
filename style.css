@@ -73,6 +73,7 @@ main {
 
 .players {
   display: grid;
+  padding: 20px;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 27px;
@@ -115,7 +116,8 @@ main {
   grid-template-columns: repeat(3, 1fr);
 }
 .recent-highlights {
-  padding: 100px 0;
+
+  padding: 100px 20px;
 }
 
 .recent-highlights h1 {
@@ -156,6 +158,8 @@ main {
 }
 .socrer-grid {
   display: grid;
+  padding: 20px;
+  
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
 }
@@ -180,7 +184,7 @@ main {
 }
 
 .match img {
-  width: 80%;
+  width: 100%;
   height: auto;
 }
 
@@ -196,7 +200,7 @@ main {
   font-weight: normal;
   color: #6c6c66;
   margin-top: 0px;
-  margin-bottom: 24px;
+  margin-bottom: 44px;
 }
 
 /* -------------
@@ -211,6 +215,7 @@ Footer style
 .icon-image img {
   max-width: 445px;
   height: auto;
+  width: 100%;
 }
 
 .social-icon {
@@ -234,7 +239,28 @@ Footer style
 Responsive For Mobile 
 ---------------- */
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
+  .hero-container,
+  .players,
+  .recent,
+  .socrer-grid,
+  .match {
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .title{
+    font-size: 32px;
+    line-height: 50px;
+  }
+  .title-1{
+    font-size: 32px;
+    line-height: 50px;
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  
   .hero-container,
   .players,
   .recent,
@@ -243,4 +269,9 @@ Responsive For Mobile
     grid-row-gap: 30px;
     grid-template-columns: 1fr;
   }
+
+.hero-container img{
+  padding-top: 30px;
+}
+
 }
